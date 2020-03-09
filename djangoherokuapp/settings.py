@@ -25,7 +25,7 @@ SECRET_KEY = 'k6$%^bu+4=kx=r-w@xx^2_l@d!o4+2t7syy9*8t4d0fn!sli4t'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://localhost:8000/','127.0.0.1:8000', 'herokudjangoapp140.herokuapp.com', 'capmecenat-dev.herokuapp.com', 'capmecenat.herokuapp.com' ]
+ALLOWED_HOSTS = ['127.0.0.1', 'herokudjangoapp140.herokuapp.com', 'capmecenat-dev.herokuapp.com', 'capmecenat.herokuapp.com' ]
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'staticpages'
 ]
 
 MIDDLEWARE = [

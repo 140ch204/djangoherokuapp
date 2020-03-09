@@ -16,6 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.conf.urls import include, url
+from staticpages import views
+
+
 urlpatterns = [
+    url(r'^$', views.landing),
+    #url(r'^staticpages/', include('staticpages.urls', namespace='staticpages')),
     path('admin/', admin.site.urls),
 ]
