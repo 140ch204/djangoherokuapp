@@ -25,10 +25,18 @@ if os.path.isfile(dotenv_file):
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'k6$%^bu+4=kx=r-w@xx^2_l@d!o4+2t7syy9*8t4d0fn!sli4t'
+SECRET_KEY = os.getenv("SECRET_KEY")
+
+'k6$%^bu+4=kx=r-w@xx^2_l@d!o4+2t7syy9*8t4d0fn!sli4t'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+
+PROD = os.getenv("PROD")
+if PROD == True : 
+    DEBUG = False
+else:
+    DEBUG = True
+
 
 ALLOWED_HOSTS = ['127.0.0.1', 'herokudjangoapp140.herokuapp.com', 'capmecenat-dev.herokuapp.com', 'capmecenat.herokuapp.com' ]
 
