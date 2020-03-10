@@ -32,7 +32,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 PROD = os.getenv("PROD")
 if PROD == 1 : 
     DEBUG = False
-else:
+else :
     DEBUG = True
 
 
