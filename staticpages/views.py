@@ -1,10 +1,13 @@
 from django.shortcuts import render
 
 # Create your views here.
+import os
 
 
 def landing(request):
-    context = {
+    # settings.py
+    TEST = os.getenv("TESTABC")
+    context = {'test': TEST
     }
     return render(request, 'staticpages/index.html', context)
 
