@@ -27,12 +27,10 @@ if os.path.isfile(dotenv_file):
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.getenv("SECRET_KEY")
 
-'k6$%^bu+4=kx=r-w@xx^2_l@d!o4+2t7syy9*8t4d0fn!sli4t'
-
 # SECURITY WARNING: don't run with debug turned on in production!
 
 PROD = os.getenv("PROD")
-if PROD == True : 
+if PROD == 1 : 
     DEBUG = False
 else:
     DEBUG = True
