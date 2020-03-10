@@ -9,12 +9,20 @@ def landing(request):
     TEST = os.getenv("TESTABC")
     context = {'test': TEST
     }
-    return render(request, 'staticpages/index.html', context)
+    return render(request, 'staticpages/dashboard.html', context)
+
+
+def dashboard(request):
+    # settings.py
+    TEST = os.getenv("TESTABC")
+    context = {'test': TEST
+    }
+    return render(request, 'staticpages/login.html', context)
 
 def login(request):
     context = {
     }
-    return render(request, 'staticpages/index.html', context)
+    return render(request, 'staticpages/login.html', context)
 
 def register(request):
     context = {
@@ -34,4 +42,4 @@ def charts(request):
 def tables(request):
     context = {
     }
-    return render(request, 'staticpages/index.html', context)
+    return render(request, 'staticpages/tables.html', context)
