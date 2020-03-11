@@ -4,12 +4,12 @@ from django.shortcuts import render
 import os
 
 
-def landing(request):
+def index(request):
     # settings.py
     TEST = os.getenv("TESTABC")
     context = {'test': TEST
     }
-    return render(request, 'staticpages/dashboard.html', context)
+    return render(request, 'staticpages/index.html', context)
 
 
 def dashboard(request):
@@ -17,7 +17,7 @@ def dashboard(request):
     TEST = os.getenv("TESTABC")
     context = {'test': TEST
     }
-    return render(request, 'staticpages/login.html', context)
+    return render(request, 'staticpages/dashboard.html', context)
 
 def login(request):
     context = {
@@ -40,6 +40,9 @@ def charts(request):
     return render(request, 'staticpages/index.html', context)
 
 def tables(request):
-    context = {
+
+    mytable = {}
+    
+    context = { 'mytable': mytable
     }
     return render(request, 'staticpages/tables.html', context)

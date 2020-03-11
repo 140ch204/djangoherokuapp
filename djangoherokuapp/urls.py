@@ -21,7 +21,7 @@ from staticpages import views
 
 
 urlpatterns = [
-    url(r'^$', views.landing),
+    url(r'^$', views.index),
     url(r'^staticpages/', include('staticpages.urls', namespace='staticpages')),
     path('admin/', admin.site.urls),
 ]
