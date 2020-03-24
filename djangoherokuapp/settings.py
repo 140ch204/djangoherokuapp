@@ -35,8 +35,12 @@ if DEBUGMODE_ACTIVATED == "1" :
 else :
     DEBUG = False
 
+ENV_LOCALHOST = os.getenv("ENV_LOCALHOST")
+if ENV_LOCALHOST == "1" : 
+    ALLOWED_HOSTS = ['127.0.0.1']
+else :
+    ALLOWED_HOSTS = ['herokudjangoapp140.herokuapp.com', 'capmecenat-dev.herokuapp.com', 'capmecenat.herokuapp.com' ]
 
-ALLOWED_HOSTS = ['127.0.0.1', 'herokudjangoapp140.herokuapp.com', 'capmecenat-dev.herokuapp.com', 'capmecenat.herokuapp.com' ]
 
 
 # Application definition
@@ -48,7 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'staticpages'
+    'staticpages',
 ]
 
 MIDDLEWARE = [
@@ -150,3 +154,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
+

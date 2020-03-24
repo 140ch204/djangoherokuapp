@@ -24,4 +24,5 @@ urlpatterns = [
     url(r'^$', views.index),
     url(r'^staticpages/', include('staticpages.urls', namespace='staticpages')),
     path('admin/', admin.site.urls),
+    path('siret/<int:siret>/', views.siret, name='siret'),
 ]
