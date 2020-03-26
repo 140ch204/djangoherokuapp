@@ -1,50 +1,35 @@
-
-{% load static %}
-
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
+{% extends 'staticpages/bases/base_index.html' %}
 
 
-    <link rel="stylesheet" type="text/css" href="{% static 'staticpages/css/bootstrap.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'staticpages/css/bootstrap_litera.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'staticpages/css/bootstrap_litera_custom.css' %}">
-    
-    <link rel="stylesheet" type="text/css" href="{% static 'staticpages/css/landing.css' %}">
+{% block navbar %}
+  {% include 'staticpages/orga/navbar.html'  %}
+{% endblock%}
+
+
+{% block content1 %}
+  {% include 'staticpages/orga/index_jumbotron.html'  %}
+{% endblock%}
+
+{% block content2 %}
+2
+{% endblock%}
+
+{% block content3 %}
+3
+{% endblock%}
+
+{% block content4 %}
+4
+{% endblock%}
+
+{% block content5 %}
+5
+{% endblock%}
+
+{% block footer %}
+  {% include 'staticpages/orga/index_footer.html'  %}
+{% endblock%}
 
 
 
-    <title>Hello, world!</title>
-  </head>
-  <body>
 
-
-    {% include 'staticpages/orga/navbar.html'  %}
-
-    {% include 'staticpages/orga/index_jumbotron.html'  %}
-
-    <a href="{% url 'staticpages:dashboard' %}" class="btn btn-primary" > Dashboard</a>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-
-    <!-- jQuery -->
-    <script src="{% static 'staticpages/js/jquery-3.4.1.slim.min.js' %}"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{% static 'staticpages/js/popper.min.js' %}"></script>
-
-    <script src="{% static 'staticpages/js/popper.min.js' %}"></script>
-
-
-  </body>
-</html>

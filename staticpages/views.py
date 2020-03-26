@@ -90,8 +90,6 @@ def testapi(request):
 
     return render(request, 'staticpages/testapi.html', context)
 
-
-
 def siret(request,siret):
 
     mydata = GouvApiData()
@@ -111,3 +109,48 @@ def siret(request,siret):
          }
 
     return render(request, 'staticpages/siret.html', context)
+
+
+def entreprises(request):
+
+    cp = '91790'
+    
+    context = { 'cp' : cp,
+         }
+
+    return render(request, 'staticpages/entreprises.html', context)
+
+def entreprise(request):
+
+    siret = 213123123132
+
+    mydata = GouvApiData()
+
+    data_entreprise = mydata.search_by_siret(siret).json()
+
+    #etablissement = {key:val for key, val in data_entreprise['etablissement'].items() if val is not None}
+
+    context = {'siret': siret, 
+        'data_entreprise' : data_entreprise,
+        #'etablissement' : etablissement,
+         }
+
+    return render(request, 'staticpages/entreprise.html', context)
+
+def associations(request):
+
+    cp = '91790'
+
+    context = { 'cp' : cp ,
+         }
+
+    return render(request, 'staticpages/associations.html', context)
+
+
+def association(request,rna):
+
+    context = { 'rna' : rna,
+         }
+
+    return render(request, 'staticpages/association.html', context)
+

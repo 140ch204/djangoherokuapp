@@ -1,23 +1,27 @@
+## Documentations  :
+# https://entreprise.data.gouv.fr/api_doc_sirene
+# https://entreprise.api.gouv.fr/
+# https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee#!/UniteLegale/findSirenByQ
+# https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee
+# https://doc.entreprise.api.gouv.fr/#bilans-entreprises-bdf-banque-de-france
+
 import requests
 import json
 import time
 from datetime import datetime
 
-
 class GouvApiData:
     """ Extrait des données de Open Data en utlisant l'API entreprise data gouv
     """ 
-
-## Documentations  :
-# https://entreprise.data.gouv.fr/api_doc_sirene
-# https://api.insee.fr/catalogue/site/themes/wso2/subthemes/insee/pages/item-info.jag?name=Sirene&version=V3&provider=insee
-# https://doc.entreprise.api.gouv.fr/#bilans-entreprises-bdf-banque-de-france
-
     def __init__(self):
         ### Initialization method ###
         self.created = datetime.now()
         self.updated = datetime.now()
         self.url_api = 'https://entreprise.data.gouv.fr/api/sirene/v3/'
+        self.url_api_sirene = 'https://entreprise.data.gouv.fr/api/sirene/v3/'  # https://entreprise.data.gouv.fr/api_doc_sirene
+        self.url_api_rncs = 'https://entreprise.data.gouv.fr/api/rncs/v1/'      # https://entreprise.data.gouv.fr/api_doc_rncs
+        self.url_api_rna = 'https://entreprise.data.gouv.fr/api/rna/v1/'     # https://entreprise.data.gouv.fr/api_doc_rna
+
         self.headers = ""
         self.response = ""
 

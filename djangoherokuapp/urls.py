@@ -22,7 +22,22 @@ from staticpages import views
 
 urlpatterns = [
     url(r'^$', views.index),
-    url(r'^staticpages/', include('staticpages.urls', namespace='staticpages')),
+    #url(r'^staticpages/', include('staticpages.urls', namespace='staticpages')),
     path('admin/', admin.site.urls),
-    path('siret/<int:siret>/', views.siret, name='siret'),
+    
+    path('dashboard/', views.dashboard, name='dashboard'),
+
+    #path('siret/<int:siret>/', views.siret, name='siret'),
+
+    path('entreprises/', views.entreprises, name='entreprises'),
+    path('entreprise/<int:siret>/', views.entreprise, name='entreprise'),
+
+    path('associations/', views.associations, name='associations'),
+    path('association/<str:rna>/', views.association, name='association'),
+
+    
+    path('', views.index, name='index'),
+    path('register/', views.register, name='register'),
+    path('login/', views.login, name='login'),
+    path('forgot/', views.forgot, name='forgot'),
 ]
