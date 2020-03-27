@@ -11,7 +11,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Landing Page - Start Bootstrap Theme</title>
+        <title>Cap Mécénat</title>
 
         <!-- Bootstrap core CSS -->
         <link href="{% static 'staticpages/landing-page/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
@@ -33,8 +33,8 @@
     <!-- Navigation -->
     <nav class="navbar navbar-light bg-light static-top">
         <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
-        <a class="btn btn-primary" href="#">Sign In</a>
+        <a class="navbar-brand" href="{% url 'index' %}">Cap Mécénat</a>
+        <a class="btn btn-primary" href="{% url 'dashboard' %}">Sign In</a>
         </div>
     </nav>
 
