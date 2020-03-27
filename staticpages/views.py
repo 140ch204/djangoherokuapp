@@ -120,9 +120,7 @@ def entreprises(request):
 
     return render(request, 'staticpages/entreprises.html', context)
 
-def entreprise(request):
-
-    siret = 213123123132
+def entreprise(request,siret):
 
     mydata = GouvApiData()
 

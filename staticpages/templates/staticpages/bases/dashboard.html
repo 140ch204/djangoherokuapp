@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    {% include 'staticpages/contents/dashboard/head.html'  %}
+
+    <title>Cap Mécénat</title>
+
+  </head>
+
+  <body>
+
+    <div id="wrapper">
+
+      {% include 'staticpages/contents/dashboard/sidebar.html'  %}
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+
+          {% include 'staticpages/contents/dashboard/topbar.html'  %}
+
+          <!-- Begin Page Content -->
+          <div class="container-fluid">
+            
+            {% block content1 %}
+      
+            {% endblock %}
+
+          </div>
+          <!-- /.container-fluid -->
+
+          {% include 'staticpages/contents/dashboard/footer.html'  %}
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+      </div>
+      <!-- End of Page Wrapper -->
+
+    </div>
+ 
+    <footer>
+      {% include 'staticpages/contents/dashboard/script_endbody.html'  %}
+    </footer>
+
+  </body>
+
+</html>
